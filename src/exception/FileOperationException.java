@@ -1,5 +1,8 @@
 package exception;
 
-public class FileOperationException
-{
+public class FileOperationException extends RescueException {
+    public FileOperationException(String message){
+        super(message);
+    }
+
 }
