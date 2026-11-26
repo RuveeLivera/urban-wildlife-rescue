@@ -1,4 +1,8 @@
 package exception;
 
-public class RescueException {
+public class RescueException extends Exception {
+    public RescueException(String message){
+        super(message);
+    }
+
 }
