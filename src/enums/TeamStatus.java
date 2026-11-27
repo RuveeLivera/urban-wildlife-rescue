@@ -1,7 +1,7 @@
 package enums;
 
 public enum TeamStatus {
-        AVALABLE,
+        AVAILABLE,
         ASSIGNED,
-        UNAVALABLE
+        UNAVAILABLE
 }
