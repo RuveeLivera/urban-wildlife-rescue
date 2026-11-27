@@ -1,41 +1,48 @@
 package model;
 
-public class Animal {
+public abstract class Animal {
+
     private String animalId;
     private String animalType;
-    private String condition;
+    private String description;
 
+
+    public Animal(String animalId, String animalType,
+                  String description) {
+
+        this.animalId = animalId;
+        this.animalType = animalType;
+        this.description = description;
+    }
 
     public String getAnimalId() {
         return animalId;
     }
-    public void setAnimalId(String animalId) {
-        this.animalId = animalId;
-    }
+
     public String getAnimalType() {
         return animalType;
     }
+
+    public String getDescription() {
+        return description;
+    }
+
     public void setAnimalType(String animalType) {
         this.animalType = animalType;
     }
-    public String getCondition() {
-        return condition;
-    }
-    public void setCondition(String condition) {
-        this.condition = condition;
+
+    public void setDescription(String description) {
+        this.description = description;
     }
 
+    public abstract String getAnimalCategory();
 
 
+    public void displayDetails() {
 
-    public Animal(String animalId, String condition, String animalType) {
-        this.animalId = animalId;
-        this.condition = condition;
-        this.animalType = animalType;
+        System.out.println("Animal ID: " + animalId);
+        System.out.println("Animal Type: " + animalType);
+        System.out.println("Category: " + getAnimalCategory());
+        System.out.println("Description: " + description);
     }
-
-
-
-
-
 }
